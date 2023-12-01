@@ -1,0 +1,12 @@
+<VirtualHost *:80>
+	ServerName domain
+	ServerAlias www.domain
+	DocumentRoot /var/www/domain
+	<Directory /var/www/domain>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride All
+		Require all granted
+	</Directory>
+	ErrorLog /var/log/apache2/domain.error.log
+	CustomLog /var/log/apache2/domain.access.log combined
+</VirtualHost>
